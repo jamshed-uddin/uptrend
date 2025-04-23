@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const ProductCard = ({ product }) => {
   return (
-    <Link className="  " href={`/product/${product.id}`}>
+    <Link className="  " href={`/products/${product.id}`}>
       <div className="h-80">
         <Image
           height={500}
