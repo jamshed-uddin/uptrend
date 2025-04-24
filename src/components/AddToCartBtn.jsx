@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/features/cart/cartSlice";
 import { cn } from "@/lib/utils";
 
-const AddToCartBtn = ({ product, variant, className }) => {
+const AddToCartBtn = ({ product, variant, className, children }) => {
   const { id, name, price, image } = product;
   const dispatch = useDispatch();
   const handleAddToCart = (e) => {
@@ -23,8 +23,9 @@ const AddToCartBtn = ({ product, variant, className }) => {
         variant={variant}
         className={cn("text-sm font-semibold cursor-pointer", className)}
         onClick={handleAddToCart}
+        disabled={product.stock == 0}
       >
-        <ShoppingCartIcon className="w-5 h-5" />
+        {children}
       </Button>
     </CardAction>
   );

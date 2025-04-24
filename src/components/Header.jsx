@@ -4,9 +4,11 @@ import CartIcon from "./CartIcon";
 
 const Header = () => {
   return (
-    <nav className="my-3">
+    <nav className="my-4">
       <ul className="flex items-center justify-between">
-        <li className="text-xl font-bold flex-grow">upTrend</li>
+        <li className="text-xl font-bold flex-grow">
+          <Link href={"/"}>upTrend</Link>
+        </li>
         <li className="">
           <CartIcon />
         </li>

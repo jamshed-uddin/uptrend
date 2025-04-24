@@ -3,6 +3,7 @@ import AddToCartBtn from "./AddToCartBtn";
 import Image from "next/image";
 import { CardContent, CardTitle } from "./ui/card";
 import Link from "next/link";
+import { ShoppingCartIcon } from "lucide-react";
 
 const ProductCard = ({ product }) => {
   return (
@@ -20,7 +21,9 @@ const ProductCard = ({ product }) => {
       <CardTitle className={"mt-3 text-lg "}>{product.name}</CardTitle>
       <div className="flex items-center justify-between ">
         <CardContent className={"pl-0"}>${product.price}</CardContent>
-        <AddToCartBtn product={product} variant={"ghost"} />
+        <AddToCartBtn product={product} variant={"ghost"}>
+          <ShoppingCartIcon className="w-5 h-5" />
+        </AddToCartBtn>
       </div>
     </Link>
   );
