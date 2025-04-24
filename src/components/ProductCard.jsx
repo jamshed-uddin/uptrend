@@ -20,7 +20,7 @@ const ProductCard = ({ product }) => {
       <CardTitle className={"mt-3 text-lg "}>{product.name}</CardTitle>
       <div className="flex items-center justify-between ">
         <CardContent className={"pl-0"}>${product.price}</CardContent>
-        <AddToCartBtn product={product} />
+        <AddToCartBtn product={product} variant={"ghost"} />
       </div>
     </Link>
   );

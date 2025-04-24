@@ -6,8 +6,9 @@ import { ShoppingCartIcon } from "lucide-react";
 import { toast } from "sonner";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/features/cart/cartSlice";
+import { cn } from "@/lib/utils";
 
-const AddToCartBtn = ({ product }) => {
+const AddToCartBtn = ({ product, variant, className }) => {
   const { id, name, price, image } = product;
   const dispatch = useDispatch();
   const handleAddToCart = (e) => {
@@ -19,8 +20,8 @@ const AddToCartBtn = ({ product }) => {
   return (
     <CardAction>
       <Button
-        variant={"link"}
-        className={"text-sm font-semibold cursor-pointer"}
+        variant={variant}
+        className={cn("text-sm font-semibold cursor-pointer", className)}
         onClick={handleAddToCart}
       >
         <ShoppingCartIcon className="w-5 h-5" />
