@@ -3,6 +3,7 @@ import "./globals.css";
 import StoreProvider from "@/providers/StoreProvider";
 import Header from "@/components/Header";
 import { Toaster } from "sonner";
+import SetProductsToState from "@/components/SetProductsToState";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
           <Header />
           {children}
           <Toaster />
+          <SetProductsToState />
         </body>
       </StoreProvider>
     </html>
