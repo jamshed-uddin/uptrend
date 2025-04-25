@@ -4,6 +4,7 @@ import StoreProvider from "@/providers/StoreProvider";
 import Header from "@/components/Header";
 import { Toaster } from "sonner";
 import SetProductsToState from "@/components/SetProductsToState";
+import { Footer } from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,13 +26,14 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <StoreProvider>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-7xl mx-auto bg-white  !px-10`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-7xl mx-auto bg-white    lg:!px-12 px-3`}
         >
           <Header />
 
           {children}
           <Toaster richColors />
           <SetProductsToState />
+          <Footer />
         </body>
       </StoreProvider>
     </html>

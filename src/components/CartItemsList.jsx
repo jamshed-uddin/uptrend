@@ -12,7 +12,7 @@ const CartItemsList = ({ cartItems }) => {
               height={100}
               width={100}
               src={`https://admin.refabry.com/storage/product/${item.image}`}
-              alt={item.name}
+              alt={"cart item image"}
               className="w-full h-full object-cover"
             />
           </div>
