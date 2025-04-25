@@ -25,11 +25,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <StoreProvider>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-7xl mx-auto bg-white lg:px-20 px-2`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-7xl mx-auto bg-white  !px-10`}
         >
           <Header />
+
           {children}
-          <Toaster />
+          <Toaster richColors />
           <SetProductsToState />
         </body>
       </StoreProvider>

@@ -28,6 +28,7 @@ const QuantityAndDeleteCartItem = ({ item }) => {
           variant={"ghost"}
           className={"text-lg px-2"}
           onClick={handleDecrement}
+          disabled={quantity === 1}
         >
           -
         </Button>
