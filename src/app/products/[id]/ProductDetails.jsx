@@ -6,8 +6,6 @@ import { useParams } from "next/navigation";
 import React from "react";
 
 const ProductDetails = ({ product }) => {
-  const { id } = useParams();
-
   return (
     <div className="my-10 ">
       <div className="flex flex-col lg:flex-row gap-5 ">
