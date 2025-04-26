@@ -5,7 +5,7 @@ export async function generateMetadata({ params }) {
   const { id } = await params;
   const products = await getProducts();
 
-  const product = products.find((p) => p.id == id);
+  const product = products?.find((p) => p.id == id);
   if (!product) {
     return {
       title: "Product not found",
@@ -35,7 +35,7 @@ const ProductDetailsPage = async ({ params }) => {
 
   const products = await getProducts();
 
-  const product = products.find((p) => p.id == id);
+  const product = products?.find((p) => p.id == id);
   return <ProductDetails product={product} />;
 };
 

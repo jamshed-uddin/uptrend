@@ -7,7 +7,7 @@ import React from "react";
 
 const ProductDetails = ({ product }) => {
   const { id } = useParams();
-  console.log(product.short_desc);
+
   return (
     <div className="my-10 ">
       <div className="flex flex-col lg:flex-row gap-5 ">
