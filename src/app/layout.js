@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         >
           <Header />
 
-          <main className="min-h-[80vh]">{children}</main>
+          <main className="min-h-[80vh] !pt-10">{children}</main>
           <Toaster richColors />
           <SetProductsToState />
           <Footer />
