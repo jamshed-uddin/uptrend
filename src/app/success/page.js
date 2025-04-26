@@ -5,7 +5,7 @@ import React from "react";
 
 const Success = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center pt-12">
       <div className="flex flex-col items-center">
         <CheckCircleIcon className="w-10 h-10 text-green-600" />
         <h1 className="text-xl font-medium">Order placed successfully</h1>

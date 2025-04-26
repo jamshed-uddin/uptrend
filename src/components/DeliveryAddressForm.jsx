@@ -67,7 +67,7 @@ const DeliveryAddressForm = ({ cartItems, totalPrice }) => {
         throw new Error(errorMessage);
       }
       router.replace("/success");
-      setTimeout(() => dispatch(resetCart()), 1000);
+      setTimeout(() => dispatch(resetCart()), 2000);
 
       console.log(data);
     } catch (error) {
