@@ -16,10 +16,6 @@ export async function generateMetadata({ params }) {
   return {
     title: product.name,
     description: product.sort_desc,
-    openGraph: {
-      title: product.name,
-      description: product.short_desc,
-    },
   };
 }
 
