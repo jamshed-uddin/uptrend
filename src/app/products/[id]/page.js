@@ -16,6 +16,17 @@ export async function generateMetadata({ params }) {
   return {
     title: product.name,
     description: product.sort_desc,
+    openGraph: {
+      title: product.name,
+      description: product.short_desc,
+      images: [
+        {
+          url: `https://admin.refabry.com/storage/product/${product?.image}`,
+          width: 800,
+          height: 600,
+        },
+      ],
+    },
   };
 }
 
@@ -23,11 +34,8 @@ const ProductDetailsPage = async ({ params }) => {
   const { id } = await params;
 
   const products = await getProducts();
-  console.log(products);
 
   const product = products?.find((p) => p.id == id);
-  console.log(product);
-
   return <ProductDetails product={product} />;
 };
 
