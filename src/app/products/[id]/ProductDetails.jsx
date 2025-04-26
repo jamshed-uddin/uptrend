@@ -26,7 +26,7 @@ const ProductDetails = ({ product }) => {
         <div className="lg:w-1/2 space-y-3">
           <h2 className="text-2xl font-medium">{product?.name}</h2>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 ">
             {product.stock > 0 ? (
               <>
                 <span className={`block bg-green-400 w-3.5 h-3.5 `}></span>

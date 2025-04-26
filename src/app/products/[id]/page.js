@@ -19,13 +19,6 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: product.name,
       description: product.short_desc,
-      images: [
-        {
-          url: `https://admin.refabry.com/storage/product/${product?.image}`,
-          width: 800,
-          height: 600,
-        },
-      ],
     },
   };
 }

@@ -26,11 +26,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <StoreProvider>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-7xl mx-auto bg-white    lg:!px-12 px-3`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-7xl mx-auto bg-white lg:!px-12 px-3`}
         >
           <Header />
 
-          <main className="min-h-[80vh] !pt-12">{children}</main>
+          <main className="min-h-[80vh] !pt-5">{children}</main>
           <Toaster richColors />
           <SetProductsToState />
           <Footer />

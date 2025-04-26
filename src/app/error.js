@@ -4,7 +4,7 @@ import React from "react";
 
 const error = () => {
   return (
-    <div>
+    <div className="!pt-12">
       <h2>Something went wrong!</h2>
     </div>
   );
