@@ -2,7 +2,7 @@ import getProducts from "@/lib/getProducts";
 import ProductDetails from "./ProductDetails";
 
 export async function generateMetadata({ params }) {
-  const { id } = params;
+  const { id } = await params;
   const products = await getProducts();
 
   const product = products?.find((p) => p.id == id);
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }) {
 }
 
 const ProductDetailsPage = async ({ params }) => {
-  const { id } = params;
+  const { id } = await params;
 
   const products = await getProducts();
 

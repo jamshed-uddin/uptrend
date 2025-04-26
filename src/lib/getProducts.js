@@ -6,7 +6,7 @@ const getProducts = async () => {
     throw new Error("Something went wrong");
   }
 
-  return products.data.data;
+  return products?.data?.data;
 };
 
 export default getProducts;
